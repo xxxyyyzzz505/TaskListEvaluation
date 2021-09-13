@@ -103,16 +103,16 @@ const Controler = ((view, model) => {
         //             </tr>`
         //         }            
         //     }
-
+        const taskListElement = document.querySelector('.' + view.domString.taskList);
         const toggleHelper = () =>{
             if (toggleBtn.style.display === "none") {
-                toggleBtn.style.display = "block";
+                taskListElement.style.display = "block";
               } else {
-                toggleBtn.style.display = "none";
+                taskListElement.style.display = "none";
               }
         }
         
-        const taskListElement = document.querySelector('.' + view.domString.taskList);
+        
         
         
 
@@ -123,7 +123,7 @@ const Controler = ((view, model) => {
     const init = () => {
         taskCounter(taskArry);
         showTask(taskArry);
-        trackToggolBtn();
+        // trackToggolBtn();
     }
 
     return {

@@ -4,12 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Task List</title>
     <link rel="stylesheet" href="./style.css" />
     <script async src="./index.js" type="module"></script>
 </head>
 <body>
-    <header>Evaluation</header>
+    <main class="content">
+        <div class="container">
+            <header class="list_header">
+                <span class="title">To-Do</span>
+                
+                <span id="toggle_btn">
+                    <label class="switch">
+                        <label for="toggle"></label> 
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </span>
+                
+            </header>
+            
+            
+
+            <div class="counter_row">
+                <div class="counter_column">
+                    <div id="overdue_counter">1</div>
+                    overdue
+                </div>
+                <div class="counter_column">
+                    <div id="duesoon_counter">1</div>
+                    duesoon
+                </div>
+                <div class="counter_column">
+                    <div id="all_counter">1</div>
+                    all
+                </div>        
+            </div>
+
+            <table class="task_list_section">
+                <tr>
+                    <td class="task_list_column">task A </td>
+                    <td><span id="overdue_number">1</span> overdue </td>
+                    <td><span id="duesoon_number">1</span> duesoon</td>
+                </tr>
+                <tr>
+                    <td class="task_list_column">task B <B></B> </td>
+                    <td><span id="overdue_number">1</span> overdue </td>
+                    <td><span id="duesoon_number">1</span> duesoon</td>
+                </tr>
+                <tr>
+                    <td class="task_list_column">task C </td>
+                    <td><span id="overdue_number">1</span> overdue </td>
+                    <td><span id="duesoon_number">1</span> duesoon</td>
+                </tr>
+            </table>
+        </div>    
+        
+            
+           
+        
+            
+            
+            
+        
+    </main>
     
 </body>
 </html>

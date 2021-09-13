@@ -1,1 +1,133 @@
+/* :root {
+    --height-header: 60px;
+    --height-todolist: 300px;
+    --height-todolist-header: 30px;
+
+    --width-todolist: 400px;
+
+    --color-green: rgb(30, 255, 0);
+    --color-red-button: rgb(148, 21, 21);
+    --color-red-li-hover: rgb(27, 172, 8);
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lobster", cursive;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    height: 100%;
+    padding-top: var(--height-header);
+}
+.container {
+    position: relative;
+    margin-top: 50px;
+    margin-left: 88px;
+    width: 50%;
+    background-color: white;
+    border: 15px solid orange;    
+}
+.counter_row {
+    position: relative;
+    display: flex;
+    margin-top:10%;
+    font-size: var(--main-font-size);
+    /* padding: 20px 130px 10px 130px; */
+    text-align: justify;
+    justify-content: space-between;
+}
+.counter_column {
+    float: left;
+    width: 33.33%;
+    padding: 0 20px 0 20px;
+}
+
+.task_list_section {
+    width: 100%;
+    max-width: 600px;
+    min-width: 100px;
+    margin-top: 20%;
+}
+
+.task_list_column {
+    width: 50%;
+}
+
+.empty {
+    background-color: gray;
+}
+
+
+
+/********************************************************* TOGGLE *********************************************/
+.switch {
+    position: relative;
+    float: right;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: orange;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px orange;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  
 

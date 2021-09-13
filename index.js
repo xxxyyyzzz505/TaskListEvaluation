@@ -91,21 +91,30 @@ const Controler = ((view, model) => {
     const trackToggolBtn = () => {
         const toggleBtn = document.querySelector('#' + view.domString.toggle);
 
-        const toggleHelper = arr => {
-            let htmltmp = '';
-            for (const obj of arr) {
-                if (!obj.isOverdue) {
-                    htmltmp += `
-                    <tr>
-                        <td class="task_list_column">${obj.title} </td>
-                        <td class="empty"></td>
-                        <td><span id="duesoon_number">${obj.counter}</span> duesoon</td>
-                    </tr>`
-                }            
-            }
-            const taskListElement = document.querySelector('.' + view.domString.taskList);
-            view.render(taskListElement, htmltmp)
+        // const toggleHelper = arr => {
+        //     let htmltmp = '';
+        //     for (const obj of arr) {
+        //         if (!obj.isOverdue) {
+        //             htmltmp += `
+        //             <tr>
+        //                 <td class="task_list_column">${obj.title} </td>
+        //                 <td class="empty"></td>
+        //                 <td><span id="duesoon_number">${obj.counter}</span> duesoon</td>
+        //             </tr>`
+        //         }            
+        //     }
+
+        const toggleHelper = () =>{
+            if (toggleBtn.style.display === "none") {
+                toggleBtn.style.display = "block";
+              } else {
+                toggleBtn.style.display = "none";
+              }
         }
+        
+        const taskListElement = document.querySelector('.' + view.domString.taskList);
+        
+        
 
         toggleBtn.addEventListener("click", toggleHelper(taskArry));
     }
@@ -114,7 +123,7 @@ const Controler = ((view, model) => {
     const init = () => {
         taskCounter(taskArry);
         showTask(taskArry);
-        // trackToggolBtn();
+        trackToggolBtn();
     }
 
     return {
